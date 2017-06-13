@@ -1,15 +1,12 @@
-var React = require("react");
-var router = require("react-router");
-var Route = router.Route;
-var Router = router.Router;
-var browserHistory = router.browserHistory;
-var IndexRoute = router.IndexRoute;
+import React from "react";
+import {Route, Router, browserHistory, IndexRoute} from ("react-router");
 
-var Main = require("../components/Main");
-var Saved = require("../components/Saved");
-var Search = require("../components/Search");
 
-module.exports = (
+import Main from "../components/Main";
+import Saved from "../components/Saved";
+import Search from "../components/Search";
+
+export default (
 
 	<Router history={browserHistory}>
 		<Route path="/" component={Main}>
@@ -22,3 +19,7 @@ module.exports = (
 	</Router>
 );
 
+//check react-router versions
+//object destructuring
+//babel.js.io 
+//stateless functional component

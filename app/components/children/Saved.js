@@ -1,8 +1,11 @@
-var React = require("react");
-var Link = require("react-router").Link;
+import React from "react";
+import  {Link} from ("react-router");
 
-var Saved = React.createClass({
-	render: function(){
+class Saved extends React.Component {
+	constructor(props) {
+      super(props);
+  }
+	render(){
 		return(
 			<div className="panel panel-default">
         		<div className="panel-heading">
@@ -10,11 +13,13 @@ var Saved = React.createClass({
         		</div>
         		<div className="panel-body text-center">
           			<h1>Saved:</h1>
-          				<p>{this.props.address}</p>
+          				<p>{this.props.saved}</p>
         		</div>
       		</div>
 		);
 	}
-});
+};
 
-module.exports = Saved;
+export default Saved;
+
+//pass down a setState function to results as a prop

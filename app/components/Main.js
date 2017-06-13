@@ -1,8 +1,12 @@
-var React = require("react");
-var Link = require("react-router").Link;
+import React from "react";
+import {Link} from ("react-router");
 
-var Main = React.createClass({
-	render: function(){
+class Main extends React.Component {
+	constructor(props) {
+      super(props);
+  }
+
+	render(){
 		return (
 			<div className="container">
 
@@ -31,6 +35,6 @@ var Main = React.createClass({
       </div>
 		);
 	}
-});
+};
 
-module.exports = Main;
+export default Main;

@@ -8,10 +8,11 @@
 //   date: '1974-07-18T00:00:00Z',
 //   url: 'http://query.nytimes.com/gst/abstract.html?res=9A0DE5D8173FEF34BC4052DFB166838F669EDE'
 // }
- var mongoose = require("mongoose");
- var Schema = mongoose.Schema;
+import  mongoose  from "mongoose";
 
- var ArticleSchema = new Schema({
+const Schema = mongoose.Schema;
+
+let ArticleSchema = new Schema({
  	title : {
  		type: String
  		required: true
@@ -26,6 +27,6 @@
  	}
  });
 
- var Article = mongoose.model("Article", ArticleSchema);
+const Article = mongoose.model("Article", ArticleSchema);
 
- module.exports = Article;
+export default Article;

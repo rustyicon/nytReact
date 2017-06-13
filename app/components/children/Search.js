@@ -1,12 +1,23 @@
-var React = require("react");
-var Link = require("react-router").Link;
+import React from "react";
+import {Link} from ("react-router");
 
-var Search = React.createClass({
+class Search extends React.Component {
 	
 //logic for handleSubmit and handleChange
+constructor(props) {
+      super(props);
+
+      this.state(){
+        setTerm: ""
+      };
+
+      }
 
 
-	render: function(){
+
+  }
+
+	render() {
 
 		return (
 
@@ -62,6 +73,6 @@ var Search = React.createClass({
 
 		);
 	}
-});
+};
 
-module.exports = Search;
+export default Search;
